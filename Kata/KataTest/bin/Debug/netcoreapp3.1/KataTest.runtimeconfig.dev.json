@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Kealey.Wardle.GTS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Kealey.Wardle.GTS\\.nuget\\packages"
+    ]
+  }
+}

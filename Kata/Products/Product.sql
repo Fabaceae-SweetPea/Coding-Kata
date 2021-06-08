@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Table1]
+(
+	[SKU] VARCHAR(5) NOT NULL PRIMARY KEY, 
+    [UnitPrice] DECIMAL(5, 2) NOT NULL
+)
