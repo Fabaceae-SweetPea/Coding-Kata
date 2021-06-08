@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kata", "Kata\Kata.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KataTest", "KataTest\KataTest.csproj", "{89890314-4AF6-4D09-AFF1-9927676DDCA6}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Products", "Products\Products.sqlproj", "{F1640210-5E00-470E-B833-898AD9245F5A}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Shop", "Shop\Shop.sqlproj", "{71F51794-5859-4CBF-A14F-F7DCF544D988}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +23,12 @@ Global
 		{89890314-4AF6-4D09-AFF1-9927676DDCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89890314-4AF6-4D09-AFF1-9927676DDCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89890314-4AF6-4D09-AFF1-9927676DDCA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1640210-5E00-470E-B833-898AD9245F5A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F51794-5859-4CBF-A14F-F7DCF544D988}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
