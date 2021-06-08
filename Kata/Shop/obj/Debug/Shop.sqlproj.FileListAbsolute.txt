@@ -1,0 +1,9 @@
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\bin\Debug\Shop.dacpac
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\bin\Debug\Shop.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\bin\Debug\Shop.pdb
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Model.xml
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\refactor.xml
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\postdeploy.sql
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\predeploy.sql
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Shop.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Shop.pdb

@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using Kata;
+using System.IO;
 
 namespace KataTest
 {
@@ -13,7 +14,10 @@ namespace KataTest
         [Test]
         public void ScanKnownItem()
         {
-            Assert.Inconclusive();
+            Item firstItem = new Item("A99", 0.50);
+
+            Checkout.Scan(firstItem);
+
         }
 
         [Test]
@@ -25,7 +29,7 @@ namespace KataTest
         [Test]
         public void TotalPrice()
         {
-            Assert.Inconclusive();
+            Checkout.Total();
         }
 
     }

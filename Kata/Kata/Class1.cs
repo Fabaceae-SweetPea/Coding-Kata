@@ -6,9 +6,9 @@ namespace Kata
 {
     public class Checkout
     {
-        public List<Item> basket = new List<Item>();
+        public static List<Item> basket = new List<Item>();
 
-        public double Total()
+        public static double Total()
         {
             double total = 0;
 
@@ -23,7 +23,7 @@ namespace Kata
             return total;
         }
 
-        public void Scan(Item item)
+        public static void Scan(Item item)
         {
             basket.Add(item);
         }
