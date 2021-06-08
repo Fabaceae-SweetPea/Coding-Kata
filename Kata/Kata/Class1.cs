@@ -17,7 +17,8 @@ namespace Kata
 
     public class Item
     {
-
+        String SKU;
+        decimal UnitPrice;
     }
 
 }

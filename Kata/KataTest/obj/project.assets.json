@@ -1225,6 +1225,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Kata/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Kata.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Kata.dll": {}
+        }
       }
     }
   },
@@ -4618,10 +4628,16 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Kata/1.0.0": {
+      "type": "project",
+      "path": "../Kata/Kata.csproj",
+      "msbuildProject": "../Kata/Kata.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Kata >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.4.0",
       "NUnit3TestAdapter >= 3.15.1",
       "nunit >= 3.12.0"
@@ -4652,7 +4668,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Kealey.Wardle.GTS\\Documents\\GitHub\\Coding-Kata\\Kata\\Kata\\Kata.csproj": {
+              "projectPath": "C:\\Users\\Kealey.Wardle.GTS\\Documents\\GitHub\\Coding-Kata\\Kata\\Kata\\Kata.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
