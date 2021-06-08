@@ -13,45 +13,12 @@ namespace Kata
         private static SqlConnection Conn;
         public static List<Item> basket = new List<Item>();
         public static List<Discount> availableDiscounts = new List<Discount>();
-        public static List<Item> Products = new List<Item>();
         public static double total = 0;
 
         private static void CreateConnection()
         {
             string ConnStr = "Server = localhost\\SQLEXPRESS01; Database = master; Trusted_Connection = True";
             Conn = new SqlConnection(ConnStr);
-        }
-
-        public static void getProductData()
-        {
-            CreateConnection();
-            string SqlString = "SELECT *  FROM [Shop].[dbo].[Products]";
-            SqlDataAdapter sda = new SqlDataAdapter(SqlString, Conn);
-            DataTable dt = new DataTable();
-            try
-            {
-                Conn.Open();
-                sda.Fill(dt);
-            }
-            catch (SqlException se)
-            {
-            }
-            finally
-            {
-                Conn.Close();
-            }
-
-            if (dt.Rows.Count > 0)
-            {
-                Item item = new Item();
-                foreach (DataRow dr in dt.Rows)
-                {
-                    item = new Item();
-                    item.SKU = dr["SKU"].ToString();
-                    item.UnitPrice = int.Parse(dr["UnitPrice"].ToString());
-                    Products.Add(item);
-                }
-            }
         }
 
         public static void getDiscountData()

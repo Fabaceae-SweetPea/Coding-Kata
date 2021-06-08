@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using Kata;
 using System.IO;
+using NuGet.Frameworks;
+using NUnit.Framework.Internal;
 
 namespace KataTest
 {
@@ -14,6 +16,7 @@ namespace KataTest
         [Test]
         public void ScanKnownItem()
         {
+            bool testSuccess;
             Item item1 = new Item();
             item1.SKU = "A99";
             item1.UnitPrice = 0.50;
@@ -36,7 +39,18 @@ namespace KataTest
             Checkout.Scan(item2);
             Checkout.Scan(item2);
             Checkout.Scan(item3);
-            Checkout.Total();
+            double total = Checkout.Total();
+
+            if (total > 0)
+            {
+                testSuccess = true;
+            }
+            else
+            {
+                testSuccess = false;
+            }
+
+            Assert.IsTrue(testSuccess);
         }
 
         [Test]
@@ -52,7 +66,19 @@ namespace KataTest
         [Test]
         public void TotalPrice()
         {
-            Checkout.Total();
+            bool testSuccess = true;
+            double total = Checkout.Total();
+
+            if (total > 0)
+            {
+                testSuccess = false;
+            }
+            else
+            {
+                testSuccess = true;
+            }
+
+            Assert.IsTrue(testSuccess);
         }
 
     }
