@@ -96,3 +96,9 @@ C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\obj\Debug\
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\obj\Debug\netcoreapp3.1\KataTest.dll
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\obj\Debug\netcoreapp3.1\KataTest.pdb
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\obj\Debug\netcoreapp3.1\KataTest.genruntimeconfig.cache
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\KataTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

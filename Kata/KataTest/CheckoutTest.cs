@@ -42,7 +42,11 @@ namespace KataTest
         [Test]
         public void ScanUnknownItem()
         {
-            Assert.Inconclusive();
+            Item item1 = new Item();
+            item1.SKU = "D78";
+            item1.UnitPrice = 0.60;
+
+            Checkout.Scan(item1);
         }
 
         [Test]

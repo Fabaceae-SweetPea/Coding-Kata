@@ -2,8 +2,8 @@ C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\bin\Debug\netc
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\bin\Debug\netcoreapp3.1\Kata.dll
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\bin\Debug\netcoreapp3.1\Kata.pdb
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.csprojAssemblyReference.cache
-C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.csproj.CoreCompileInputs.cache
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.AssemblyInfoInputs.cache
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.AssemblyInfo.cs
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.dll
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.pdb
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Kata\obj\Debug\netcoreapp3.1\Kata.csproj.CoreCompileInputs.cache

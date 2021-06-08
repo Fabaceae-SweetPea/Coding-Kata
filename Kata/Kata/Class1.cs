@@ -3,14 +3,119 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
 using System.Linq;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Kata
 {
     public class Checkout
     {
+        private static SqlConnection Conn;
         public static List<Item> basket = new List<Item>();
         public static List<Discount> availableDiscounts = new List<Discount>();
+        public static List<Item> Products = new List<Item>();
         public static double total = 0;
+
+        private static void CreateConnection()
+        {
+            string ConnStr = "Server = localhost\\SQLEXPRESS01; Database = master; Trusted_Connection = True";
+            Conn = new SqlConnection(ConnStr);
+        }
+
+        public static void getProductData()
+        {
+            CreateConnection();
+            string SqlString = "SELECT *  FROM [Shop].[dbo].[Products]";
+            SqlDataAdapter sda = new SqlDataAdapter(SqlString, Conn);
+            DataTable dt = new DataTable();
+            try
+            {
+                Conn.Open();
+                sda.Fill(dt);
+            }
+            catch (SqlException se)
+            {
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            if (dt.Rows.Count > 0)
+            {
+                Item item = new Item();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    item = new Item();
+                    item.SKU = dr["SKU"].ToString();
+                    item.UnitPrice = int.Parse(dr["UnitPrice"].ToString());
+                    Products.Add(item);
+                }
+            }
+        }
+
+        public static void getDiscountData()
+        {
+            CreateConnection();
+            string SqlString = "SELECT *  FROM [Shop].[dbo].[Offers]";
+            SqlDataAdapter sda = new SqlDataAdapter(SqlString, Conn);
+            DataTable dt = new DataTable();
+            try
+            {
+                Conn.Open();
+                sda.Fill(dt);
+            }
+            catch (SqlException se)
+            {
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            if (dt.Rows.Count > 0)
+            {
+                Discount discount = new Discount();
+                foreach (DataRow dr in dt.Rows)
+                {
+                    discount = new Discount();
+                    discount.SKU = dr["SKU"].ToString();
+                    discount.Quantity = int.Parse(dr["Quantity"].ToString());
+                    discount.OfferPrice = double.Parse(dr["OfferPrice"].ToString());
+                    availableDiscounts.Add(discount);
+                }
+            }
+        }
+
+        public static bool checkProductExists(String SKU)
+        {
+            CreateConnection();
+            string SqlString = "SELECT *  FROM [Shop].[dbo].[Products] WHERE [SKU] = '" + SKU + "'";
+            DataTable dt = new DataTable();
+            try
+            {
+                Conn.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter(SqlString, Conn))
+                {
+                    da.Fill(dt);
+                }
+
+            }
+            catch (SqlException se)
+            {
+            }
+            finally
+            {
+                Conn.Close();
+            }
+
+            if (dt.Rows.Count > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
 
         public static double Total()
         {
@@ -31,17 +136,7 @@ namespace Kata
 
         public static void ApplyDiscount()
         {
-            Discount discount = new Discount();
-            discount.SKU = "A99";
-            discount.Quantity = 3;
-            discount.OfferPrice = 1.30;
-            availableDiscounts.Add(discount);
-
-            discount = new Discount();
-            discount.SKU = "B15";
-            discount.Quantity = 2;
-            discount.OfferPrice = 0.50;
-            availableDiscounts.Add(discount);
+            getDiscountData();
 
             foreach (Discount d in availableDiscounts)
             {
@@ -59,7 +154,7 @@ namespace Kata
 
         public static void Scan(Item item)
         {
-            if (item.SKU == "A99" || item.SKU == "B15" || item.SKU == "C40")
+            if (checkProductExists(item.SKU))
             {
                 basket.Add(item);
             }
