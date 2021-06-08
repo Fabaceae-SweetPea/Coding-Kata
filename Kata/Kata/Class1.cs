@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
+using System.Linq;
 
 namespace Kata
 {
     public class Checkout
     {
         public static List<Item> basket = new List<Item>();
+        public static List<Discount> availableDiscounts = new List<Discount>();
         public static double total = 0;
 
         public static double Total()
@@ -16,44 +18,43 @@ namespace Kata
             {
                 foreach (Item i in basket)
                 {
-                    total += i.UnitPrice;
+                    total = Math.Round(total + i.UnitPrice, 2);
                 }
             }
 
+            if (basket.Count > 0)
+            {
+                ApplyDiscount();
+            }
             return total;
         }
 
         public static void ApplyDiscount()
         {
-            int itemCountB15 = 0;
-            int itemCountA99 = 0;
+            Discount discount = new Discount();
+            discount.SKU = "A99";
+            discount.Quantity = 3;
+            discount.OfferPrice = 1.30;
+            availableDiscounts.Add(discount);
 
-            foreach (Item i in basket)
+            discount = new Discount();
+            discount.SKU = "B15";
+            discount.Quantity = 2;
+            discount.OfferPrice = 0.50;
+            availableDiscounts.Add(discount);
+
+            foreach (Discount d in availableDiscounts)
             {
-                if (i.SKU == "B15")
+                int count = basket.Count(i => i.SKU == d.SKU);
+                Item item = basket.Find(x => x.SKU == d.SKU);
+                if (count != 0 && count % d.Quantity >= 1)
                 {
-                    itemCountB15++;
-                }
-
-                if (i.SKU == "A99")
-                {
-                    itemCountA99++;
+                    int discountNumber = count / d.Quantity;
+                    total = Math.Round(total + (d.OfferPrice * discountNumber), 2);
+                    total = Math.Round(total - (item.UnitPrice * (discountNumber * d.Quantity)), 2);
                 }
             }
-            
-            if (itemCountB15 % 2 >= 1)
-            {
-                int discountNumber = itemCountB15 / 2;
-                total += 0.45 * discountNumber;
-                total -= 0.30 * (discountNumber * 2);
-            }
 
-            if (itemCountA99 % 3 >= 1)
-            {
-                int discountNumber = itemCountA99 / 3;
-                total += 1.30 * discountNumber;
-                total -= 0.50 * (discountNumber * 3);
-            }
         }
 
         public static void Scan(Item item)
@@ -74,15 +75,18 @@ namespace Kata
     {
         public Item() { }
 
-        public Item(string SKU, double UnitPrice)
-        {
-            SKU = SKU;
-            UnitPrice = UnitPrice;
-        }
-
         public string SKU { get; set; }
         public double UnitPrice { get; set; }
 
     }
 
+    public class Discount
+    {
+        public Discount() { }
+
+        public string SKU { get; set; }
+        public int Quantity { get; set; }
+        public double OfferPrice { get; set; }
+
+    }
 }

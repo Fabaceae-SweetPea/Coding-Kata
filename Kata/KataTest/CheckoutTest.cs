@@ -14,9 +14,18 @@ namespace KataTest
         [Test]
         public void ScanKnownItem()
         {
-            Item item1 = new Item("A99", 0.50);
-            Item item2 = new Item("B15", 0.30);
-            Item item3 = new Item("C40", 0.60);
+            Item item1 = new Item();
+            item1.SKU = "A99";
+            item1.UnitPrice = 0.50;
+
+            Item item2 = new Item();
+            item2.SKU = "B15";
+            item2.UnitPrice = 0.30;
+
+            Item item3 = new Item();
+            item3.SKU = "C40";
+            item3.UnitPrice = 0.60;
+
 
             Checkout.Scan(item1);
             Checkout.Scan(item1);
@@ -27,6 +36,7 @@ namespace KataTest
             Checkout.Scan(item2);
             Checkout.Scan(item2);
             Checkout.Scan(item3);
+            Checkout.Total();
         }
 
         [Test]
@@ -39,7 +49,6 @@ namespace KataTest
         public void TotalPrice()
         {
             Checkout.Total();
-            Checkout.ApplyDiscount();
         }
 
     }
