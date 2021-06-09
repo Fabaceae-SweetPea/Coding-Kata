@@ -86,6 +86,7 @@ namespace Kata
 
         public static double Total()
         {
+            double totalPrice;
             if (basket.Count > 0)
             {
                 foreach (Item i in basket)
@@ -98,7 +99,11 @@ namespace Kata
             {
                 ApplyDiscount();
             }
-            return total;
+
+            totalPrice = total;
+            cleanUp();
+
+            return totalPrice;
         }
 
         public static void ApplyDiscount()
@@ -129,6 +134,13 @@ namespace Kata
             {
                 new ArgumentException("Item does not exist");
             }     
+        }
+
+        private static void cleanUp()
+        {
+            basket = new List<Item>();
+            availableDiscounts = new List<Discount>();
+            total = 0;
         }
 
     }

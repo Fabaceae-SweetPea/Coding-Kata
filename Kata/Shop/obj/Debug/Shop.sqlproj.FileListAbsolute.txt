@@ -3,3 +3,4 @@ C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\bin\Debug\Shop
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\bin\Debug\Shop.pdb
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Shop.dll
 C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Shop.pdb
+C:\Users\Kealey.Wardle.GTS\Documents\GitHub\Coding-Kata\Kata\Shop\obj\Debug\Shop.sqlprojAssemblyReference.cache

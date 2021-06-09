@@ -3,11 +3,14 @@ using Kata;
 using System.IO;
 using NuGet.Frameworks;
 using NUnit.Framework.Internal;
+using System;
 
 namespace KataTest
 {
     public class Tests
     {
+        public TestContext testData { get; set; }
+
         [SetUp]
         public void Setup()
         {
@@ -50,6 +53,8 @@ namespace KataTest
                 testSuccess = false;
             }
 
+           
+            Console.WriteLine("Total price is: " + total.ToString());
             Assert.IsTrue(testSuccess);
         }
 
